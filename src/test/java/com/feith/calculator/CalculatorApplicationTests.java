@@ -13,7 +13,7 @@ class CalculatorApplicationTests {
 	@Test
 	//void contextLoads() {
 	void testSum(){
-		 assertEquals(5,calculator.sum(2,3));
+		 assertEquals(5,calculator.sum(3,3));
 		 System.out.println("im test");
 	}
 }
