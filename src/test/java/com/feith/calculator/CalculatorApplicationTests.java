@@ -11,11 +11,12 @@ class CalculatorApplicationTests {
 	private Calculator calculator = new Calculator();
 	
 	@Test
-	//void contextLoads() {
-	void testSum(){
-		 assertEquals(5,calculator.sum(3,3));
-		 System.out.println("im test");
+	void testSum5(){
+		 assertEquals(5, calculator.sum(2,3));
 	}
+
+	void testSum10(){
+		assertEquals(10, calculator.sum(2,8));
+    }
+
 }
-
-
