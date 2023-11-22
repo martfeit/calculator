@@ -12,9 +12,10 @@ class CalculatorApplicationTests {
 	
 	@Test
 	void testSum5(){
-		 assertEquals(5, calculator.sum(2,3));
+		assertEquals(5, calculator.sum(2,3));
 	}
 
+	@Test
 	void testSum10(){
 		assertEquals(10, calculator.sum(2,8));
     }
