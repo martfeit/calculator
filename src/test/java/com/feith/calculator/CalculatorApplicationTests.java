@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
@@ -17,10 +19,11 @@ class CalculatorApplicationTests {
 		assertEquals(5, calculator.sum(2,3));
 	}
 
-	@Test
-	@DisplayName("Simple Addition Test 2:")
-	void testSum10(){
-		assertEquals(10, calculator.sum(2,8));
+	@ParameterizedTest
+	@CsvSource("2,8,10")
+	@DisplayName("Test 2 + 8 =10")
+	void testSum10(int first, int second, int expected){
+		assertEquals(expected, calculator.sum(first, second));
     }
 
 }
