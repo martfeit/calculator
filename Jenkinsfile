@@ -26,7 +26,7 @@ pipeline {
                     reportFiles: 'index.html'
                     reportName: "Jacoco Report"
                 ])
-                sh "gradlew jacocoTestCoverageVerification"
+                sh "./gradlew jacocoTestCoverageVerification"
             }
         }
     }
